@@ -3,38 +3,49 @@ import Navbar from "../components/react/Navbar"
 import "../style/custom.css";
 import heroImage from "../assets/img/hero2.png"
 import { Image } from 'astro:assets';
+import IndexLayout from "../layouts/index.astro"
+import logoBmw from "../assets/img/logo-bmw.png"
+import logoPorsche from "../assets/img/logo-porsche.png"
+import logoMercedes from "../assets/img/logo-mercedes.png"
+import logoLamborghini from "../assets/img/logo-lamborghini.png"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="bg-neutral-100">
+<IndexLayout>
 		<header class="bg-transparent  absolute top-0 left-0 right-0 w-full flex items-center z-10">
 			<Navbar client:load/>
 		</header>
 		<main class="">
-			<section id="hero-section" class=" justify-between px-10 container">
+			<section id="hero-section" class="bg-neutral-100 justify-between pb-14 px-10 container">
 				<div class="flex-wrap  bg-white  rounded-3xl   flex">
 					<div class="text-hero  w-full lg:w-1/2 translate-y-10 lg:p-16  p-5">
 						<p class="text-xl font-mono">Catch me if you can! Spotted the beast on the streets, where dreams meet horsepower.</p>
 						<p class="text-md ">Some cars are meant to be seen, not just driven. Spotted perfection.</p>
 					</div>
 					<div class="image-hero w-full lg:w-1/2 	">
-						<Image  src={heroImage} alt="A bird sitting on a nest of eggs." />
+						<Image   src={heroImage} alt="A bird sitting on a nest of eggs." />
 					</div>
 				</div>
 			</section>
-			<section class="flex justify-center relative border border-red-500">
-				<h1 class="absolute border border-red-500 -top-5">hello</h1>
+			<section id="logo-brand" class="p-10">
+				<div class="flex bg-neutral-100 justify-evenly flex-wrap border py-5 rounded-3xl">
+					<div class="w-1/3 border lg:w-1/5">
+						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoBmw} alt="brand-bmw"/>
+					</div>
+					<div class="w-1/3 border lg:w-1/5">
+						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoPorsche} alt="brand-porsche"/>
+					</div>
+					<div class="w-1/3 border lg:w-1/5">
+						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoLamborghini} alt="brand-lamborghini"/>
+					</div>
+					<div class="w-1/3 border lg:w-1/5">
+						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoMercedes} alt="brand-mercedes"/>
+					</div>
+					
+					
+				</div>
 			</section>
+			
 		</main>
-
-
 	<script>
 		// Navbar Fixed
 		window.onscroll = function () {
@@ -48,5 +59,5 @@ import { Image } from 'astro:assets';
 		}
 		};
 	</script>
-	</body>
-</html>
+</IndexLayout>
+
