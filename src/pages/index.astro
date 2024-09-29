@@ -17,7 +17,7 @@ import CarImage from "../components/ImageCar.astro"
 ---
 
 <IndexLayout>
-			<section id="hero-section" class="bg-neutral-100 justify-between pb-14 px-10 container">
+			<section id="hero-section" class="bg-neutral-100  justify-between pb-14 px-10 container">
 				<div class="flex-wrap  bg-white  rounded-3xl   flex">
 					<div class="text-hero  w-full lg:w-1/2 translate-y-10 lg:p-16  p-5">
 						<p class="text-xl font-mono">Catch me if you can! Spotted the beast on the streets, where dreams meet horsepower.</p>
@@ -29,32 +29,32 @@ import CarImage from "../components/ImageCar.astro"
 				</div>
 			</section>
 			<section id="logo-brand" class="p-10">
-				<div class="flex bg-neutral-100  justify-evenly flex-wrap border py-5 rounded-3xl">
+				<div id="efek" class="flex bg-neutral-100 shadow-lg justify-evenly flex-wrap border py-5 rounded-bl-3xl rounded-tr-3xl">
 					<div class="w-1/3  lg:w-1/5">
-						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoBmw} alt="brand-bmw"/>
+						<Image  class="image w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoBmw} alt="brand-bmw"/>
 					</div>
 					<div class="w-1/3  lg:w-1/5 flex justify-center">
-						<Image class="sm:w-36 w-20  grayscale hover:grayscale-0 transition hover:scale-110" src={logoPorsche} alt="brand-porsche"/>
+						<Image class="image sm:w-36 w-20  grayscale hover:grayscale-0 transition hover:scale-110" src={logoPorsche} alt="brand-porsche"/>
 					</div>
 					<div class="w-1/3  lg:w-1/5">
-						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoLamborghini} alt="brand-lamborghini"/>
+						<Image class="image w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoLamborghini} alt="brand-lamborghini"/>
 					</div>
 					<div class="w-1/3  lg:w-1/5">
-						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoMercedes} alt="brand-mercedes"/>
+						<Image class="image w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoMercedes} alt="brand-mercedes"/>
 					</div>	
 					<div class="w-1/3  lg:w-1/5">
-						<Image class="w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoVolkswagen} alt="brand-mercedes"/>
+						<Image class="image w-full grayscale hover:grayscale-0 transition hover:scale-110" src={logoVolkswagen} alt="brand-mercedes"/>
 					</div>	
 				</div>
 			</section>
 			<section id="gallery" class="bg-black py-16">
 				<div class="flex flex-wrap ">
-					<CarImage url={carGallardo} style={{ parrent:"w-full transition lg:w-1/2 relative", content: "sm:text-7xl" }} text="Lamborghini Gallardo"/>
+					<CarImage url={carGallardo} style={{ parrent:"overflow-hidden w-full transition lg:w-1/2 relative", content: "sm:text-7xl" }} text="Lamborghini Gallardo"/>
 					<div class="w-full lg:w-1/2 mt-5 lg:mt-0 flex flex-wrap gap-3 justify-center">
-						<CarImage url={carScirocco} style={{ parrent:"w-[45%] transition  relative", content: "sm:text-4xl" }} text="Sciroco"/>
-						<CarImage url={carMercyG63} style={{ parrent:"w-[45%] transition  relative", content: "sm:text-4xl" }} text="Mercedes G63"/>
-						<CarImage url={carBmw435i} style={{ parrent:"w-[45%] transition  relative", content: "sm:text-4xl" }} text="Bmw 435i"/>
-						<CarImage url={carCarrera} style={{ parrent:"w-[45%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+						<CarImage url={carScirocco} style={{ parrent:"overflow-hidden w-[45%] transition  relative", content: "sm:text-4xl" }} text="Sciroco"/>
+						<CarImage url={carMercyG63} style={{ parrent:"overflow-hidden w-[45%] transition  relative", content: "sm:text-4xl" }} text="Mercedes G63"/>
+						<CarImage url={carBmw435i} style={{ parrent:"overflow-hidden w-[45%] transition  relative", content: "sm:text-4xl" }} text="Bmw 435i"/>
+						<CarImage url={carCarrera} style={{ parrent:"overflow-hidden w-[45%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
 						
 					</div>
 				</div>
@@ -66,12 +66,25 @@ import CarImage from "../components/ImageCar.astro"
 		const header = document.querySelector("header");
 		const fixedNav = header.offsetTop;
 
+		const efek = document.getElementById("efek")
+	
+		const imageBrand = document.getElementsByClassName("image")
+
 		if (window.pageYOffset > fixedNav) {
 			header.classList.add("navbar-fixed");
 		} else {
 			header.classList.remove("navbar-fixed");
 		}
-		};
+
+		if(window.pageYOffset > 190){
+			Array.from(imageBrand).forEach((el) => el.classList.add("efek"))
+		}
+		else{
+			Array.from(imageBrand).forEach((el) => el.classList.remove("efek"))
+		}
+
+		
+	}
 	</script>
 </IndexLayout>
 

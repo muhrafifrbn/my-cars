@@ -42,14 +42,6 @@ export default function Navbar() {
                   Cars
                 </a>
               </li>
-              <li className="group">
-                <a
-                  href="#contact"
-                  className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700"
-                >
-                  My Collection
-                </a>
-              </li>
             </ul>
           </nav>
         </div>
