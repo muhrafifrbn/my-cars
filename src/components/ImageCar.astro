@@ -1,0 +1,12 @@
+---
+    const {url, text, style} = Astro.props
+    import { Image } from 'astro:assets';
+
+---
+
+<div class={style.parrent}>
+    <Image class="hover:grayscale transition peer rounded-bl-3xl rounded-tr-3xl" src={url} alt="lamborghini-gallardo"/>
+    <div class="peer-hover:inline-block transition hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute">
+        <p class={`text-xl font-serif font-bold text-white ${style.content}`}>{text}</p>
+    </div>
+</div>
