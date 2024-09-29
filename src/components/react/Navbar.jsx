@@ -17,7 +17,7 @@ export default function Navbar() {
           </a>
         </div>
         <div className="flex items-center px-4">
-          <button onClick={hamburgerMenu} id="hamburger" name="hamburger" type="button" className="block absolute right-4 lg:hidden">
+          <button onClick={hamburgerMenu} id="hamburger" name="hamburger" type="button" className="block absolute right-10 lg:hidden">
             <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
             <span className="hamburger-line transition duration-300 ease-in-out"></span>
             <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
@@ -26,7 +26,7 @@ export default function Navbar() {
           <nav
             id="nav-menu"
             ref={(el) => (elementNav.current.navMenu = el)}
-            className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            className="hidden absolute py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
           >
             <ul className="block lg:flex">
               <li className="group">

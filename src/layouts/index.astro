@@ -1,4 +1,7 @@
+---
+import Navbar from "../components/react/Navbar"
 
+---
 <html lang="en">
     <head>
 		<meta charset="utf-8" />
@@ -8,6 +11,12 @@
 		<title>Cars Spotted</title>
 	</head>
 <body >
-    <slot/>
+	<header class="bg-transparent  absolute top-0 left-1/2 -translate-x-1/2 rounded-br-full rounded-bl-full  w-[80%]  z-10">
+		<Navbar client:load/>
+	</header>
+	<main>
+		<slot/>
+	</main>
+    
 </body>
 </html>

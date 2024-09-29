@@ -1,5 +1,4 @@
 ---
-import Navbar from "../components/react/Navbar"
 import "../style/custom.css";
 import heroImage from "../assets/img/hero2.png"
 import { Image } from 'astro:assets';
@@ -18,10 +17,6 @@ import CarImage from "../components/ImageCar.astro"
 ---
 
 <IndexLayout>
-		<header class="bg-transparent  absolute top-0 left-0 right-0 w-full flex items-center z-10">
-			<Navbar client:load/>
-		</header>
-		<main class="">
 			<section id="hero-section" class="bg-neutral-100 justify-between pb-14 px-10 container">
 				<div class="flex-wrap  bg-white  rounded-3xl   flex">
 					<div class="text-hero  w-full lg:w-1/2 translate-y-10 lg:p-16  p-5">
@@ -65,7 +60,6 @@ import CarImage from "../components/ImageCar.astro"
 				</div>
 			</section>
 			
-		</main>
 	<script>
 		// Navbar Fixed
 		window.onscroll = function () {
