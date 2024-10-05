@@ -47,7 +47,7 @@ import CarImage from "../components/ImageCar.astro"
 					</div>	
 				</div>
 			</section>
-			<section id="gallery" class="bg-black py-16">
+			<section id="gallery" class="bg-black pt-16 pb-10">
 				<div class="flex flex-wrap ">
 					<CarImage url={carGallardo} style={{ parrent:"overflow-hidden w-full transition lg:w-1/2 relative", content: "sm:text-7xl" }} text="Lamborghini Gallardo"/>
 					<div class="w-full lg:w-1/2 mt-5 lg:mt-0 flex flex-wrap gap-3 justify-center">
@@ -56,6 +56,15 @@ import CarImage from "../components/ImageCar.astro"
 						<CarImage url={carBmw435i} style={{ parrent:"overflow-hidden w-[45%] transition  relative", content: "sm:text-4xl" }} text="Bmw 435i"/>
 						<CarImage url={carCarrera} style={{ parrent:"overflow-hidden w-[45%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
 						
+					</div>
+				</div>
+				<div class="pt-5 flex justify-between px-16 items-center  flex-wrap gap-3">
+					<div class="text-white w-full md:w-1/2">
+						<p class=" text-3xl font-semibold text-orange-500">INVENTORY</p>
+						<p class="py-3 text-xl">Find out more about your favorite car!</p>
+					</div>
+					<div class="w-full md:w-auto flex justify-end">
+						<a href="" class="transition inline-block py-2 px-11 text-lg rounded-lg  text-orange-500 hover:text-white hover:bg-orange-500  text-center border-orange-500 ring-2 ring-orange-500">View All</a>
 					</div>
 				</div>
 			</section>
@@ -75,7 +84,6 @@ import CarImage from "../components/ImageCar.astro"
 		} else {
 			header.classList.remove("navbar-fixed");
 		}
-
 		if(window.pageYOffset > 190){
 			Array.from(imageBrand).forEach((el) => el.classList.add("efek"))
 		}
