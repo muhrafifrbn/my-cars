@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between relative">
         <div className="px-4 group">
           <a href="#home" className="font-bold text-xl text-slate-800 flex justify-center items-center py-2 px-4 rounded-xl group-hover:scale-110 transition">
-            My Cars
+            Rafif RBBAN
           </a>
         </div>
         <div className="flex items-center px-4">
