@@ -30,15 +30,12 @@ export default function Navbar() {
           >
             <ul className="block lg:flex">
               <li className="group">
-                <a href="#home" className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700">
+                <a href="/" className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700">
                   Home
                 </a>
               </li>
               <li className="group">
-                <a
-                  href="#portfolio"
-                  className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700"
-                >
+                <a href="/" className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700">
                   Cars
                 </a>
               </li>
