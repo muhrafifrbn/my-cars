@@ -1,7 +1,12 @@
 ---
     import IndexLayout from "../layouts/index.astro"
+    import HeroSection from "../components/heroSection.astro"
+    import heroImage from "../assets/img/hero2.png"
+    import { Image } from "astro:assets";
 ---
 
 <IndexLayout>
-    <h1>Hello World</h1>
+    <HeroSection style={{ bgParrent:"bg-neutral-100", bgChild:"bg-white" }}>
+        <Image slot="image-section" src={heroImage} alt="A bird sitting on a nest of eggs."/>
+    </HeroSection>
 </IndexLayout>

@@ -1,0 +1,16 @@
+---
+ const {style, text } = Astro.props;
+---
+
+
+<section id="hero-section" class={`pb-14 px-10 ${style.bgParrent}`}>
+    <div class={`flex-wrap  rounded-3xl rounded-tl-none ${style.bgChild}  flex`}>
+        <div class="text-hero  w-full lg:w-1/2 translate-y-10 lg:p-16  p-5">
+            <p class="text-xl font-mono">Catch me if you can! Spotted the beast on the streets, where dreams meet horsepower.</p>
+            <p class="text-md ">Some cars are meant to be seen, not just driven. Spotted perfection.</p>
+        </div>
+        <div class="image-hero w-full lg:w-1/2 	">
+             <slot name="image-section"></slot>
+        </div>
+    </div>
+</section>

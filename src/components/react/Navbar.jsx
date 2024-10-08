@@ -12,7 +12,7 @@ export default function Navbar() {
     <div className="container">
       <div className="flex items-center justify-between relative">
         <div className="px-4 group">
-          <a href="#home" className="font-bold text-xl text-slate-800 flex justify-center items-center py-2 px-4 rounded-xl group-hover:scale-110 transition">
+          <a href="/my-cars" className="font-bold text-xl text-slate-800 flex justify-center items-center py-2 px-4 rounded-xl group-hover:scale-110 transition">
             My Cars
           </a>
         </div>
@@ -30,12 +30,18 @@ export default function Navbar() {
           >
             <ul className="block lg:flex">
               <li className="group">
-                <a href="/" className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700">
+                <a
+                  href="/my-cars"
+                  className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700"
+                >
                   Home
                 </a>
               </li>
               <li className="group">
-                <a href="/" className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700">
+                <a
+                  href="/my-cars/allCars"
+                  className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700"
+                >
                   Cars
                 </a>
               </li>
