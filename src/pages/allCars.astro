@@ -3,10 +3,26 @@
     import HeroSection from "../components/heroSection.astro"
     import heroImage from "../assets/img/hero2.png"
     import { Image } from "astro:assets";
+    import ImageCar from "../components/ImageCar.astro";
+    import * as gambar from "../assets/gambar-mobil"
 ---
 
 <IndexLayout>
     <HeroSection style={{ bgParrent:"bg-neutral-100", bgChild:"bg-white" }}>
         <Image slot="image-section" src={heroImage} alt="A bird sitting on a nest of eggs."/>
     </HeroSection>
+    <section class="bg-sky-950 py-16">
+        <div class="flex flex-wrap justify-evenly gap-3">
+            <ImageCar url={gambar.carGallardo} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+            <ImageCar url={gambar.carBmw640i} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+            <ImageCar url={gambar.carBmw435i} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+            <ImageCar url={gambar.carMercyG63} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+            <ImageCar url={gambar.carMercySls} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+            <ImageCar url={gambar.carCarrera} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+            <ImageCar url={gambar.carCarrera} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+            <ImageCar url={gambar.carCarrera} style={{ parrent:"overflow-hidden w-[45%] lg:w-[22%] transition relative", content: "sm:text-4xl" }} text="Porsche Carrera"/>
+        </div>
+    </section>
+
+    
 </IndexLayout>

@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/react/Navbar"
+import "../style/custom.css";
 
 ---
 <html lang="en">
@@ -18,5 +19,30 @@ import Navbar from "../components/react/Navbar"
 		<slot/>
 	</main>
     
+	<script>
+		// Navbar Fixed
+		window.onscroll = function () {
+		const header = document.querySelector("header");
+		const fixedNav = header.offsetTop;
+
+		const efek = document.getElementById("efek")
+	
+		const imageBrand = document.getElementsByClassName("image")
+
+		if (window.pageYOffset > fixedNav) {
+			header.classList.add("navbar-fixed");
+		} else {
+			header.classList.remove("navbar-fixed");
+		}
+		if(window.pageYOffset > 190){
+			Array.from(imageBrand).forEach((el) => el.classList.add("efek"))
+		}
+		else{
+			Array.from(imageBrand).forEach((el) => el.classList.remove("efek"))
+		}
+
+		
+	}
+	</script>
 </body>
 </html>
