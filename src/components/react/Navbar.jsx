@@ -1,54 +1,79 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Navbar() {
-  const elementNav = useRef({});
+  const element = useRef({});
+  const [responsive, setResponsive] = useState(true);
 
-  function hamburgerMenu(el) {
-    el.target.classList.toggle("hamburger-active");
-    elementNav.current.navMenu.classList.toggle("hidden");
+  function handleBtnHamburger({ btnHamburger }) {
+    btnHamburger.classList.toggle("hamburger-active");
+  }
+
+  function handleMenuResponsive({ menuResponsive }) {
+    if (responsive) {
+      menuResponsive.classList.remove("animate-hidden");
+      menuResponsive.classList.add("animate-show");
+    } else {
+      menuResponsive.classList.remove("animate-show");
+      menuResponsive.classList.add("animate-hidden");
+    }
+
+    setResponsive(!responsive);
   }
 
   return (
-    <div className="container">
-      <div className="flex items-center justify-between relative">
-        <div className="px-4 group">
+    <nav className="">
+      <div className="px-8 md:px-16 navigation-head flex justify-between items-center">
+        <div className="logo group">
           <a href="/my-cars" className="font-bold text-xl text-slate-800 flex justify-center items-center py-2 px-4 rounded-xl group-hover:scale-110 transition">
             My Cars
           </a>
         </div>
-        <div className="flex items-center px-4">
-          <button onClick={hamburgerMenu} id="hamburger" name="hamburger" type="button" className="block absolute right-10 lg:hidden">
+        <div className="menu hidden md:flex">
+          <div className="group">
+            <a className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700" href="/my-cars">
+              Home
+            </a>
+          </div>
+          <div className="group">
+            <a
+              className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
+              href="/my-cars/allCars"
+            >
+              Cars
+            </a>
+          </div>
+        </div>
+
+        <div className="navbar-responsive md:hidden">
+          <button
+            onClick={() => {
+              handleBtnHamburger(element.current);
+              handleMenuResponsive(element.current);
+            }}
+            ref={(el) => (element.current.btnHamburger = el)}
+          >
             <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
             <span className="hamburger-line transition duration-300 ease-in-out"></span>
             <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
           </button>
-
-          <nav
-            id="nav-menu"
-            ref={(el) => (elementNav.current.navMenu = el)}
-            className="hidden absolute py-2 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
-          >
-            <ul className="block lg:flex">
-              <li className="group">
-                <a
-                  href="/my-cars"
-                  className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700"
-                >
-                  Home
-                </a>
-              </li>
-              <li className="group">
-                <a
-                  href="/my-cars/allCars"
-                  className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-110 group-hover:shadow-md group-hover:shadow-slate-700"
-                >
-                  Cars
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
-    </div>
+
+      <div className="menu-responsive overflow-hidden md:hidden h-0" ref={(el) => (element.current.menuResponsive = el)}>
+        <div className="group ">
+          <a className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700" href="/my-cars">
+            Home
+          </a>
+        </div>
+        <div className="group ">
+          <a
+            className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
+            href="/my-cars/allCars"
+          >
+            Cars
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 }
