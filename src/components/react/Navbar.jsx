@@ -59,15 +59,18 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="menu-responsive overflow-hidden md:hidden h-0" ref={(el) => (element.current.menuResponsive = el)}>
-        <div className="group ">
-          <a className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700" href="/my-cars">
+      <div className="menu-responsive bg-black rounded-3xl bg-opacity-75 overflow-hidden md:hidden h-0" ref={(el) => (element.current.menuResponsive = el)}>
+        <div className="group">
+          <a
+            className="text-orange-600   block text-base font-bold text-center  py-2 px-5 mx-4  group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
+            href="/my-cars"
+          >
             Home
           </a>
         </div>
         <div className="group ">
           <a
-            className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
+            className="text-orange-600 border-b-2 border-orange-600  font-bold text-base  py-2 px-5 mx-4 block text-center group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
             href="/my-cars/allCars"
           >
             Cars
