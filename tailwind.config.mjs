@@ -3,6 +3,12 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        protestStrike: ["Protest Strike", "sans-serif"],
+        spaceMono: ["Space Mono", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
+      },
       animation: { show: "show 1s  forwards", hidden: "hidden 1s forwards" },
       keyframes: {
         show: {
