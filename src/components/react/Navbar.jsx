@@ -24,19 +24,22 @@ export default function Navbar() {
     <nav className="">
       <div className="px-8 md:px-16 navigation-head flex justify-between items-center">
         <div className="logo group">
-          <a href="/my-cars" className="font-oswald  font-bold text-3xl text-slate-800 flex justify-center items-center py-2 px-4 rounded-xl group-hover:scale-110 transition">
+          <a href="/my-cars" className="font-oswald  font-bold text-3xl  flex justify-center items-center py-2 px-4 rounded-xl group-hover:scale-110 transition">
             Spotted Cars
           </a>
         </div>
         <div className="menu hidden md:flex font-montserrat">
           <div className="group">
-            <a className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700" href="/my-cars">
+            <a
+              className="text-base font-semibold  py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
+              href="/my-cars"
+            >
               Home
             </a>
           </div>
           <div className="group">
             <a
-              className="text-base text-dark py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
+              className="text-base font-semibold  py-2 px-5 mx-4 flex group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
               href="/my-cars/allCars"
             >
               Cars
@@ -59,7 +62,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="menu-responsive font-montserrat bg-black rounded-3xl bg-opacity-75 overflow-hidden md:hidden h-0" ref={(el) => (element.current.menuResponsive = el)}>
+      <div className="menu-responsive font-montserrat  rounded-3xl bg-opacity-75 overflow-hidden md:hidden h-0" ref={(el) => (element.current.menuResponsive = el)}>
         <div className="group">
           <a
             className="text-orange-600   block text-base font-bold text-center  py-2 px-5 mx-4  group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
@@ -70,7 +73,7 @@ export default function Navbar() {
         </div>
         <div className="group ">
           <a
-            className="text-orange-600 border-b-2 border-orange-600  font-bold text-base  py-2 px-5 mx-4 block text-center group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
+            className="text-orange-600   font-bold text-base  py-2 px-5 mx-4 block text-center group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
             href="/my-cars/allCars"
           >
             Cars
