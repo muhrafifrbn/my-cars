@@ -29,6 +29,8 @@ import "../style/custom.css";
 		window.onscroll = function () {
 		const header = document.querySelector("header");
 		const fixedNav = header.offsetTop;
+		const menuResponsive = document.getElementsByClassName("menu-responsive")[0]
+		// console.log(menuResponsive)
 
 		const efek = document.getElementById("efek")
 	
@@ -36,8 +38,11 @@ import "../style/custom.css";
 
 		if (window.pageYOffset > fixedNav) {
 			header.classList.add("navbar-fixed");
+			menuResponsive.classList.remove("style-nav")
+			
 		} else {
 			header.classList.remove("navbar-fixed");
+			menuResponsive.classList.add("style-nav")
 		}
 		if(window.pageYOffset > 190){
 			Array.from(imageBrand).forEach((el) => el.classList.add("efek"))

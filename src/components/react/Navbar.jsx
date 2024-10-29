@@ -62,7 +62,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="menu-responsive font-montserrat  rounded-3xl bg-opacity-75 overflow-hidden md:hidden h-0" ref={(el) => (element.current.menuResponsive = el)}>
+      <div className="menu-responsive style-nav font-montserrat  rounded-3xl bg-opacity-75 overflow-hidden md:hidden h-0" ref={(el) => (element.current.menuResponsive = el)}>
         <div className="group">
           <a
             className="text-orange-600   block text-base font-bold text-center  py-2 px-5 mx-4  group-hover:bg-slate-800 group-hover:rounded-lg group-hover:text-sky-50 transition group-hover:scale-105 group-hover:shadow-md group-hover:shadow-slate-700"
